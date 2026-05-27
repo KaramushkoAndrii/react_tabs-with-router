@@ -9,7 +9,6 @@ const tabs = [
 
 export const TabsPage = () => {
   const { tabId } = useParams();
-
   const currentTab = tabs.find(tab => tab.id === tabId);
 
   return (
@@ -17,9 +16,7 @@ export const TabsPage = () => {
       <div className="container">
         <h1 className="title">Tabs page</h1>
 
-        <div className="tabs is-boxed">
-          <Tabs tabs={tabs} />
-        </div>
+        <Tabs tabs={tabs} />
 
         <div className="block" data-cy="TabContent">
           {currentTab ? currentTab.content : 'Please select a tab'}
